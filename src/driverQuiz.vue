@@ -1,6 +1,4 @@
 <template>
-
-
     <preQuiz v-if="this.curr == -1" v-on:preNext="curr++;"/>
     <Quiz v-else-if="this.curr >= 0 && this.curr < this.total"
       :question="questions[this.curr].text" :answers="questions[this.curr].answers"
@@ -9,7 +7,6 @@
       @quizNext="next"
       />
     <postQuiz v-else-if="this.curr >= this.total"/>
-
 
 </template>
 
@@ -59,12 +56,10 @@ export default {
       if (this.curr < this.total) {
         this.curr++;
       }
-      if (this.curr === this.total) {
-        console.log(this.answers);
-      }
-      this.green = (this.curr / this.total) * 100;
       this.yellow = 0;
+      this.green = (this.curr / this.total) * 100;
       this.red = ((this.total - this.curr) / this.total) * 100;
+
     }
   }
 };
