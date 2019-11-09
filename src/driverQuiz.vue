@@ -6,7 +6,9 @@
       @hasAnswered="hasAnswered()"
       @quizNext="next"
       />
-    <postQuiz v-else-if="this.curr >= this.total"/>
+    <postQuiz v-else-if="this.curr >= this.total"
+      :userAns="answers"
+      />
 
 </template>
 

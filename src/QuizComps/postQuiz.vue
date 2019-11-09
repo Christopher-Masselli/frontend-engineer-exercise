@@ -17,13 +17,18 @@
           >
           <br>
           <p class="h2 text-success text-center">Test completed!</p>
-          <button> Results </button>
+          <button type="button" class="btn btn-primary mx-auto d-block" v-on:click="flipShowResults()"> Results </button>
+          <Results v-if="showResults"
+          :userAns="userAns"
+          :correctAns="correctAns"
+          />
         </div>
       </div>
     </div>
   </transition>
 </template>
 <script>
+import Results from './Results.vue'
 export default {
   name: "postQuiz",
   props: {
@@ -32,10 +37,24 @@ export default {
       required: true
     }
   },
+  components: {
+    Results,
+  },
   data() {
     return {
-      correctAns: ["Yes", "Great", "John Adams", "Paris", "26"]
+      showResults: false,
+      correctAns: ["Yes", "Great", "John Adams", "Paris", "26"],
+    };
+  },
+  created() {
+    this.showResults = false;
+  },
+  methods: {
+    flipShowResults() {
+      this.showResults = !this.showResults
+      console.log(this.showResults)
     }
   }
+
 }
 </script>
