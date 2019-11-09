@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="h1 text-center">{{correct}}%</p>
+    <p class="h1 text-center" :class="pickScoreColor(correct)">{{correct}}%</p>
     <table class="table table-hover">
       <thead>
         <tr>
@@ -44,12 +44,26 @@ export default {
     this.correct = this.correct / this.userAns.length * 100
   },
   methods: {
-    pickClass(x, y){
+    pickClass(x, y) {
       if (x == y)
       {
         return 'table-success'
       }
       return 'table-danger'
+    },
+    pickScoreColor(x) {
+      if ( x >= 80)
+      {
+        return 'text-success'
+      }
+      else if ( x >= 70)
+      {
+        return 'text-warning'
+      }
+      else
+      {
+        return 'text-danger'
+      }
     }
   }
 };
