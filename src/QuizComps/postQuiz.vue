@@ -17,6 +17,7 @@
           >
           <br>
           <p class="h2 text-success text-center">Test completed!</p>
+          <button> Results </button>
         </div>
       </div>
     </div>
@@ -25,10 +26,16 @@
 <script>
 export default {
   name: "postQuiz",
-  data: () => ({
-
-  })
+  props: {
+    userAns: {
+      type: Array,
+      required: true
+    }
+  },
+  data() {
+    return {
+      correctAns: ["Yes", "Great", "John Adams", "Paris", "26"]
+    }
+  }
 }
 </script>
-<style lang="scss" scoped>
-</style>
