@@ -18,10 +18,12 @@
           <br>
           <p class="h2 text-success text-center">Test completed!</p>
           <button type="button" class="btn btn-primary mx-auto d-block" v-on:click="flipShowResults()"> Results </button>
+          <br>
           <Results v-if="showResults"
           :userAns="userAns"
           :correctAns="correctAns"
           />
+
         </div>
       </div>
     </div>
