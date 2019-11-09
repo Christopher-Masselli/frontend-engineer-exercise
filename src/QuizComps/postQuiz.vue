@@ -54,7 +54,7 @@ export default {
   methods: {
     flipShowResults() {
       this.showResults = !this.showResults
-      console.log(this.showResults)
+
     }
   }
 

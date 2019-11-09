@@ -42,7 +42,6 @@ export default {
       return [x, this.userAns[i]]
     })
     this.correct = this.correct / this.userAns.length * 100
-    console.log(this.correct )
   },
   methods: {
     pickClass(x, y){
