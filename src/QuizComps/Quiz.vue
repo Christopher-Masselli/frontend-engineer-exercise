@@ -3,13 +3,13 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="progress">
-          <div class="progress-bar bg-success" role="progressbar" :style="{ width: green + '%'}"></div>
+          <div class="progress-bar bg-success" role="progressbar" :style="{ width: green + '%'}"/>
           <div
             class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
             role="progressbar"
             :style="{ width: yellow + '%'}"
-          ></div>
-          <div class="progress-bar bg-danger" role="progressbar" :style="{ width: red + '%'}"></div>
+          />
+          <div class="progress-bar bg-danger" role="progressbar" :style="{ width: red + '%'}"/>
         </div>
         <div class="modal-body" >
           <p>{{question}}</p>
